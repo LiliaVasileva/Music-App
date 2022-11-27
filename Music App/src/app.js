@@ -1,5 +1,6 @@
 import {page, render} from './lib.js';
 import { getUserData } from './util.js';
+import { showCatalog } from './views/catalog.js';
 import { showHome } from './views/home.js';
 import { showLogin } from './views/login.js';
 import { updateNav } from './views/nav.js';
@@ -13,7 +14,8 @@ const main = document.getElementById('main-content');
 page(decorateContext);
 page('/', showHome);
 page('/login', showLogin);
-page('/register', showRegister)
+page('/register', showRegister);
+page('/catalog', showCatalog);
 
 
 updateNav();

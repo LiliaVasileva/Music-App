@@ -16,8 +16,8 @@ const registerTemplate = (onRegister) => html`
             <label for="password" class="vhide">Password</label>
             <input id="password" class="password" name="password" type="password" placeholder="Password">
 
-            <label for="confPass" class="vhide">Confirm Password:</label>
-            <input id="confPass" class="confPass" name="confPass" type="password" placeholder="Confirm Password">
+            <label for="conf-pass" class="vhide">Confirm Password:</label>
+            <input id="conf-pass" class="conf-pass" name="repeatPassword" type="password" placeholder="Confirm Password">
 
             <button type="submit" class="register">Register</button>
 
@@ -32,12 +32,13 @@ const registerTemplate = (onRegister) => html`
 export function showRegister(ctx) {
     ctx.render(registerTemplate(createSubmitHandler(onRegister)));
 
-    async function onRegister({ email, password, confPass }) {
+    async function onRegister({ email, password, repeatPassword }) {
+        console.log([email, password, repeatPassword])
 
         if (email == '' || password == '') {
             return alert('All fields are required');
         }
-        if (password != confPass) {
+        if (password != repeatPassword) {
             return alert('Password don\'t match');
         }
 
