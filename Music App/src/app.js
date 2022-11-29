@@ -1,10 +1,12 @@
 import {page, render} from './lib.js';
 import { getUserData } from './util.js';
 import { showCatalog } from './views/catalog.js';
+import { showCreate } from './views/create.js';
 import { showHome } from './views/home.js';
 import { showLogin } from './views/login.js';
 import { updateNav } from './views/nav.js';
 import { showRegister } from './views/register.js';
+import { showDetails } from './views/details.js';
 
 
 
@@ -16,6 +18,8 @@ page('/', showHome);
 page('/login', showLogin);
 page('/register', showRegister);
 page('/catalog', showCatalog);
+page('/create', showCreate);
+page('/catalog/:id', showDetails);
 
 
 updateNav();

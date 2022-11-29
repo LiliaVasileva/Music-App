@@ -18,7 +18,7 @@ const navTemplate = (hasUser) => html`
         <li><a href="/login">Login</a></li>
         <li><a href="/register">Register</a></li>`
         : html`        
-        <li><a href="#">Create Album</a></li>
+        <li><a href="/create">Create Album</a></li>
         <li><a @click=${onLogout} href="javascript:void(0)">Logout</a></li>`
     }
     </ul>

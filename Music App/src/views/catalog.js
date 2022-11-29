@@ -26,18 +26,18 @@ const albumCardTemplate = (album) => html`
             <p class="price">Price: $${album.price}</p>
             <p class="date">Release Date: ${album.releaseDate}</p>
         </div>
-        ${renderButton()}
+        ${renderButton(album._id)}
     </div>
 </div>`;
 
-function renderButton(){
+function renderButton(id){
     const user = getUserData();
     if (!user){
         return nothing
     }
     return html`
     <div class="btn-group">
-        <a href="#" id="details">Details</a>
+        <a href="/catalog/${id}" id="details">Details</a>
     </div>`
 }
 
