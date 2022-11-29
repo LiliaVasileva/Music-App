@@ -7,7 +7,7 @@ import { getUserData } from "../util.js";
 
 const catalogTemplate = (albums) => html`
 <section id="catalogPage">
-${!albums ? html`
+${albums.length == 0 ? html`
     <p>No Albums in Catalog!</p>`
         : html`
     <h1>All Albums</h1>
