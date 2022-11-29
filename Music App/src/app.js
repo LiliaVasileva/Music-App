@@ -7,6 +7,7 @@ import { showLogin } from './views/login.js';
 import { updateNav } from './views/nav.js';
 import { showRegister } from './views/register.js';
 import { showDetails } from './views/details.js';
+import { showEdit } from './views/edit.js';
 
 
 
@@ -20,6 +21,7 @@ page('/register', showRegister);
 page('/catalog', showCatalog);
 page('/create', showCreate);
 page('/catalog/:id', showDetails);
+page('/edit/:id', showEdit)
 
 
 updateNav();

@@ -21,7 +21,7 @@ const detailsAlbumTemplate = (album, isOwner, onDelete) => html`
 
                     ${isOwner ? html `
                     <div class="actionBtn">
-                        <a href="#" class="edit">Edit</a>
+                        <a href="/edit/${album._id}" class="edit">Edit</a>
                         <a @click=${onDelete} href="javascript:void(0)" class="remove">Delete</a>
                     </div>` : nothing}
                 </div>
